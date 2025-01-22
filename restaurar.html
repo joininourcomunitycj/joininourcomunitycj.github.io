@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurar Contraseña</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 20px 60px;
+            font-size: 1rem;
+            color: #000000;
+            background-color: #f006aa;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;}
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Restaurar Contraseña</h2>
+
+        <p>Por favor, ingresa a este enlace para restaurar tu contraseña</p>
+
+        <form id="reset-form">
+            <div class="form-group">
+            </div>
+            <a href="https://forms.gle/iGePBFKjbHgzrx7EA" class="button">Aquí</a>
+        </form>
+
+        <p id="message"></p>
+
+        <a href="nn.html" class="back-link">Volver al inicio de sesión</a>
+    </div>
+
+    <script>
+        document.getElementById('reset-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+
+            // Aquí, en un sistema real, deberías hacer una solicitud para enviar un correo al usuario.
+            // Para simularlo, solo mostramos un mensaje:
+
+            document.getElementById('message').innerText = `Se ha enviado un enlace para restaurar la contraseña a ${email}. Revisa tu bandeja de entrada.`;
+        });
+    </script>
+</body>
+</html>
