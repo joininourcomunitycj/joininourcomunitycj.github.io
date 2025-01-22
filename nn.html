@@ -108,16 +108,14 @@
         </form>
     </div>
     <script>
-    // Array de usuarios con sus correos y contraseñas
     const users = [
         { email: 'jersoncasallas12@gmail.com', password: 'casallasjm18' },
-        { email: 'the1%@gmail.com', password: 'casallasjm18' },
-        { email: 'jersoncasallas1@gmail.com', password: 'casallasjm18' }
+        { email: 'otro@ejemplo.com', password: 'abcdef' },
+        { email: 'admin@ejemplo.com', password: 'admin123' }
     ];
 
-    // Escuchar el evento de envío del formulario
     document.getElementById('login-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevenir que el formulario se envíe y la página se recargue
+        event.preventDefault();
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
@@ -132,14 +130,16 @@
             }
         }
 
-        // Si el usuario es encontrado, redirige a la página
         if (userFound) {
+            // Si el usuario es encontrado, marca el inicio de sesión como exitoso
+            localStorage.setItem('loggedIn', 'true'); // Guardamos en localStorage
             alert('Inicio de sesión exitoso. ¡Bienvenido!');
-            window.location.href = 'index.html'; // Redirige a la página especificada
+            window.location.href = 'https://joininourcomunitycj.github.io/index.html'; // Redirige a la página
         } else {
             alert('Credenciales incorrectas. Inténtalo de nuevo.');
         }
     });
-</script>  
+</script>
+  
 </body>
 </html>
