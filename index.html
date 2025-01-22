@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El 1% - Comunidad Exclusiva</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -137,43 +136,10 @@
                 </a>
             </p>
         </section>
-
-        <!-- Google Sign-In -->
-        <section id="google-login">
-            <h2>Inicia sesión con Google</h2>
-            <div id="g_id_onload"
-                 data-client_id="TU_CLIENT_ID"
-                 data-login_uri="https://joininourcomunitycj.github.io/index.html"
-                 data-auto_prompt="false">
-            </div>
-            <div class="g_id_signin"
-                 data-type="standard"
-                 data-shape="rectangular"
-                 data-theme="outline"
-                 data-text="signin_with"
-                 data-size="large"
-                 data-logo_alignment="left">
-            </div>
-        </section>
+        
     </main>
     <footer>
         <p>&copy; 2025 El 1%. Todos los derechos reservados.</p>
     </footer>
-    <script>
-        function handleCredentialResponse(response) {
-            console.log("Token JWT recibido: ", response.credential);
-
-            const user = JSON.parse(atob(response.credential.split('.')[1]));
-            alert(`¡Hola, ${user.name}! Bienvenido a nuestra página.`);
-        }
-
-        window.onload = () => {
-            google.accounts.id.initialize({
-                client_id: "945969383474-roocruiqe0g3cnp1b2lqibk941rj6lib.apps.googleusercontent.com",
-                callback: handleCredentialResponse,
-            });
-            google.accounts.id.prompt();
-        };
-    </script>
 </body>
 </html>
