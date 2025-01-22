@@ -103,26 +103,35 @@
                 <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
             </div>
             <button type="submit" class="login-btn">Iniciar Sesión</button>
-            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            <a href="restaurar.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            <a href="https://forms.gle/1Sb7iVZuVoLYpBMaA" class="forgot-password">Registrarse</a>
         </form>
     </div>
-
     <script>
+        // Array de usuarios con sus correos y contraseñas
+        const users = [
+            { email: 'jersoncasallas12@gmail.com', password: 'casallasjm18' },
+            { email: 'the1%@gmail.com', password: 'casallasjm18' },
+            { email: 'jersoncasallas1@gmail.com', password: 'casallasjm18' }
+        ];
+    
         document.getElementById('login-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
-
-            // Obtiene los valores de los campos
+            event.preventDefault();
+    
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-
-            // Realiza validaciones simples
-            if (!email || !password) {
-                alert('Por favor, completa todos los campos.');
-                return;
+    
+            // Buscar el usuario que coincida con el correo y la contraseña ingresados
+            let userFound = false;
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email === email && users[i].password === password) {
+                    userFound = true;
+                    break;
+                }
             }
-
-            // Simula un inicio de sesión exitoso (puedes reemplazar esto con una llamada a un servidor)
-            if (email === 'usuario@ejemplo.com' && password === '123456') {
+    
+            // Si el usuario es encontrado, redirige a la página
+            if (userFound) {
                 alert('Inicio de sesión exitoso. ¡Bienvenido!');
                 window.location.href = 'https://joininourcomunitycj.github.io/index.html'; // Redirige a la página especificada
             } else {
@@ -130,5 +139,6 @@
             }
         });
     </script>
+    
 </body>
 </html>
