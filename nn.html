@@ -108,37 +108,38 @@
         </form>
     </div>
     <script>
-        // Array de usuarios con sus correos y contraseñas
-        const users = [
-            { email: 'jersoncasallas12@gmail.com', password: 'casallasjm18' },
-            { email: 'the1%@gmail.com', password: 'casallasjm18' },
-            { email: 'jersoncasallas1@gmail.com', password: 'casallasjm18' }
-        ];
-    
-        document.getElementById('login-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-    
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-    
-            // Buscar el usuario que coincida con el correo y la contraseña ingresados
-            let userFound = false;
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].email === email && users[i].password === password) {
-                    userFound = true;
-                    break;
-                }
+    // Array de usuarios con sus correos y contraseñas
+    const users = [
+        { email: 'jersoncasallas12@gmail.com', password: 'casallasjm18' },
+        { email: 'the1%@gmail.com', password: 'casallasjm18' },
+        { email: 'jersoncasallas1@gmail.com', password: 'casallasjm18' }
+    ];
+
+    // Escuchar el evento de envío del formulario
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenir que el formulario se envíe y la página se recargue
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        let userFound = false;
+
+        // Buscar el usuario que coincida con el correo y la contraseña ingresados
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].email === email && users[i].password === password) {
+                userFound = true;
+                break;
             }
-    
-            // Si el usuario es encontrado, redirige a la página
-            if (userFound) {
-                alert('Inicio de sesión exitoso. ¡Bienvenido!');
-                window.location.href = 'https://joininourcomunitycj.github.io/index.html'; // Redirige a la página especificada
-            } else {
-                alert('Credenciales incorrectas. Inténtalo de nuevo.');
-            }
-        });
-    </script>
-    
+        }
+
+        // Si el usuario es encontrado, redirige a la página
+        if (userFound) {
+            alert('Inicio de sesión exitoso. ¡Bienvenido!');
+            window.location.href = 'https://joininourcomunitycj.github.io/index.html'; // Redirige a la página especificada
+        } else {
+            alert('Credenciales incorrectas. Inténtalo de nuevo.');
+        }
+    });
+</script>  
 </body>
 </html>
