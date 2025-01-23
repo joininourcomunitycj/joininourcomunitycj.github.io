@@ -37,6 +37,13 @@
     </style>
 </head>
 <body>
+    <script>
+    // Verifica si el usuario está logueado
+    if (!localStorage.getItem('loggedIn')) {
+        // Si no está logueado, redirige a la página de inicio de sesión (nn.html)
+        window.location.href = 'nn.html';
+    }
+    </script>
     <h1>Categoría en Desarrollo</h1>
     <a href="index.html" class="button">Volver a la Página Principal</a>
 </body>
