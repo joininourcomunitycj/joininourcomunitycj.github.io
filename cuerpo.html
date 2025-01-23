@@ -3,48 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categoría en Desarrollo</title>
+    <title>Cuerpo - El 1%</title>
     <style>
         body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f9;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #000000;
         }
-        h1 {
-            font-size: 4rem;
-            color: #555;
+        header {
+            background: linear-gradient(90deg, #000000, #e20000);
+            color: #000000;
+            padding: 20px;
             text-align: center;
         }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #383737;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(88, 88, 88, 0.1);
+        }
+        section h2 {
+            color: #ff030394;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+            color: #000000;
+        }
+        ul li {
+            margin: 10px 0;
+            color: #000000;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #000000;
+            color: #f70606;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
         .button {
+            display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 1rem;
-            color: #fff;
-            background-color: #007BFF;
+            color: #000000;
+            background-color:rgb(51, 5, 51) ;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
             text-decoration: none;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
+            text-align: center;
+            cursor: pointer;}
     </style>
 </head>
 <body>
     <script>
-    // Verifica si el usuario está logueado
-    if (!localStorage.getItem('loggedIn')) {
-        // Si no está logueado, redirige a la página de inicio de sesión (nn.html)
-        window.location.href = 'nn.html';
-    }
-    </script>
-    <h1>Categoría en Desarrollo</h1>
-    <a href="index.html" class="button">Volver a la Página Principal</a>
+        // Verifica si el usuario está logueado
+        if (!localStorage.getItem('loggedIn')) {
+            // Si no está logueado, redirige a la página de inicio de sesión (nn.html)
+            window.location.href = 'nn.html';
+        }
+        </script>
+    <header>
+        <h1>Bienvenido a la categoría: Cuerpo</h1>
+        <p>Descubre cómo cuidar, fortalecer y mejorar tu cuerpo para alcanzar tu máximo potencial.</p>
+    </header>
+    <main>
+        <a href="index.html" class="button">Volver a la Página Principal</a>
+        <section>
+            <h2>Importancia del Cuidado Físico</h2>
+            <p>El cuerpo es el vehículo que nos lleva a través de la vida. Mantenerlo en óptimas condiciones no solo mejora nuestra salud física, sino también nuestro bienestar mental y emocional. Aquí exploraremos estrategias para optimizar tu rendimiento físico.</p>
+        </section>
+        <section>
+            <h2>Temas Destacados</h2>
+            <ul>
+                <li><strong>Nutrición:</strong> La base para un cuerpo sano. Aprende cómo una dieta balanceada puede transformar tu energía y bienestar.</li>
+                <li><strong>Entrenamiento:</strong> Desde rutinas de fuerza hasta ejercicios de flexibilidad. Encuentra el plan que mejor se adapte a tus objetivos.</li>
+                <li><strong>Descanso:</strong> La recuperación es clave para un cuerpo fuerte. Descubre la importancia del sueño y cómo optimizarlo.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Actividades Recomendadas</h2>
+            <p>Para empezar, aquí tienes algunas actividades que podrías explorar:</p>
+            <ul>
+                <li>Caminatas diarias o trote ligero.</li>
+                <li>Yoga o pilates para mejorar la flexibilidad y reducir el estrés.</li>
+                <li>Levantamiento de pesas para construir fuerza y resistencia.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Consejos Prácticos</h2>
+            <ul>
+                <li>Hidrátate correctamente; el agua es esencial para el rendimiento físico.</li>
+                <li>Establece metas alcanzables y mide tu progreso regularmente.</li>
+                <li>Escucha a tu cuerpo; no ignores señales de fatiga o dolor.</li>
+            </ul>
+        </section>
+    </main>
+    <main>
+        <section>
+            <h2>YOUTUBERS DESTACADOS EN ÉSTA SECCIÓN</h2>
+            <p>A continuación, verás canales de Youtube en los cuales encontrarás a personas que son muy reconocidas por su cuerpo, pero no solo por eso, sino la manera en que han cambiado su mentalidad para mejorar su cuerpo.
+                En este caso, verás canales que fortalecerán tu cuerpo, te darán consejos pero recuerda que no todo son ventajas, algunos canales tienen sus puntos positivos y puntos por mejorar "Nadie es perfecto"
+            </p>
+        </section>
+        <section>
+            <h2>Youtubers Destacados</h2>
+            <ul>
+                <li><strong>BUFF ACADEMY:</strong> Un hombre el cual podrá ayudarte a cambiar tu estado Físico y Mental. Aquí una pequeña prueba:</li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xYTOV7Mj8Pk?si=qzVC8Oaig2Ac5OQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <li><strong>THENX:</strong>Un canal que te servirá para fortalecerte si no tienes pesas o no puedes ir al Gimnasio al igual que Buff Academy. La única desventaja es que la mayoría de vídeos son en inglés pero sus vídeos permiten cambiar el audio a Español.</li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RfjTb64edZA?si=ir317G8vXLQbfFJv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <li><strong>ATHLEAN-X Español:</strong>Es una guía prácticamente perfecta si vas al gimnasio, tienes pesas o equipo de entrenamiento y quieres una guía. Descubre este canal en español: </li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vc3aK56StYY?si=AaBASN5nJp3KxzS7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <li><strong>Cristian Active:</strong>Si prefieres algo más flexible y no tan rígido y algo de diversión, puedes probrar este canal:</li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xkezWeyJIj4?si=fRBTUkHRuBTKiEpL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <li>Si no dispones de mucho dinero, puedes ver Cristian Active, Buff Academy y Thenx. Si tu enfoque es mejorar en técnica, claridad de alimentación, ejercicios, etc. puedes visitar a ATHLEAN-X Español</li>
+                <li>Pronto abriremos un lugar para que envíen playlists de música</li>
+            </ul>
+            </main>
+    <footer>
+        <p>&copy; 2025 El 1%. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
