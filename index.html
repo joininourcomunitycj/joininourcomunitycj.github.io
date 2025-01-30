@@ -136,26 +136,24 @@
 </head>
 <body>
     <script>
-    // Verifica si el usuario está logueado
-    if (!localStorage.getItem('loggedIn')) {
-        // Si no está logueado, redirige a la página de inicio de sesión (nn.html)
-        window.location.href = 'nn.html';
-    }
-    const loginTime = localStorage.getItem('loginTime');
-    
-    if (loginTime) {
-        const currentTime = Date.now();
-        const thirtySeconds = 30 * 1000; // 30 segundos en milisegundos
-
-        if (currentTime - loginTime > thirtySeconds) {
-            alert('Tu sesión ha expirado. Inicia sesión nuevamente.');
-            localStorage.removeItem('loggedIn'); // Elimina la sesión
-            localStorage.removeItem('loginTime'); // Elimina la marca de tiempo
-            window.location.href = 'nn.html'; // Redirige al login
+        // Verifica si el usuario está logueado
+        if (!localStorage.getItem('loggedIn')) {
+            window.location.href = 'nn.html';
         }
-    }
-    </script>
-
+        const loginTime = localStorage.getItem('loginTime');
+        
+        if (loginTime) {
+            const currentTime = Date.now();
+            const thirtySeconds = 24 * 60 * 60 * 1000; // 30 segundos en milisegundos
+    
+            if (currentTime - loginTime > thirtySeconds) {
+                alert('Tu sesión ha expirado. Inicia sesión nuevamente.');
+                localStorage.removeItem('loggedIn'); // Elimina la sesión
+                localStorage.removeItem('loginTime'); // Elimina la marca de tiempo
+                window.location.href = 'nn.html'; // Redirige al login
+            }
+        }
+        </script>
     <header>
         <h1>El 1% / The 1%</h1>
         <p>Una comunidad exclusiva de personas excepcionales</p>
@@ -238,9 +236,15 @@
         <a href="#contact">Contáctanos</a>
         <a href="#colaborate">Apóyanos</a>
         <button id="logoutButton">Cerrar sesión</button>
-    </nav><br>
+    </nav><br><br><br><br>
     <footer>
         <p>&copy; 2025 El 1%. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = 'nn.html';
+        });
+    </script>
 </body>
 </html>
