@@ -100,6 +100,12 @@
             bottom: 0;
             width: 100%;
         }
+        .cat {color: #ff1e56;
+            margin: 20px 0;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);}
         /* Agregar estilos responsivos */
         @media (max-width: 768px) {
             nav {
@@ -135,6 +141,19 @@
         // Si no está logueado, redirige a la página de inicio de sesión (nn.html)
         window.location.href = 'nn.html';
     }
+    const loginTime = localStorage.getItem('loginTime');
+    
+    if (loginTime) {
+        const currentTime = Date.now();
+        const thirtySeconds = 30 * 1000; // 30 segundos en milisegundos
+
+        if (currentTime - loginTime > thirtySeconds) {
+            alert('Tu sesión ha expirado. Inicia sesión nuevamente.');
+            localStorage.removeItem('loggedIn'); // Elimina la sesión
+            localStorage.removeItem('loginTime'); // Elimina la marca de tiempo
+            window.location.href = 'nn.html'; // Redirige al login
+        }
+    }
     </script>
 
     <header>
@@ -166,11 +185,11 @@
             <img src="https://img.freepik.com/fotos-premium/silueta-persona-meditando-estrellas_1027208-4.jpg" alt="Personas meditando">
         </section>
         <section id="categories">
-            <h2>Categorías</h2>
+            <h2> Categorías</h2> <br>
             <ul>
-                <li><a href="alma.html">1. Alma</a></li> <br>
-                <li><a href="mente.html">2. Mente</a></li><br>
-                <li><a href="cuerpo.html">3. Cuerpo</a></li> <br>
+                <li><a href="alma.html" class="cat">1. Alma</a></li> <br><br><br><br>
+                <li><a href="mente.html" class="cat">2. Mente</a></li><br><br><br><br>
+                <li><a href="cuerpo.html" class="cat">3. Cuerpo</a></li> <br><br><br><br>
             </ul>
         </section>
         <section id="aditionalinformation">
