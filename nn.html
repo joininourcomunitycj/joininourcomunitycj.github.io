@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/joininourcomunitycj/joininourcomunitycj.github.io/refs/heads/main/favicon.ico" type="image/x-icon">
+    <title>Login Interface</title>
+    <link rel="icon" href="https://joininourcomunitycj.github.io/favicon.ico" type="image/x-icon">
     <style>
         * {
             margin: 0;
@@ -110,37 +110,38 @@
     </div>
     <script>
     const users = [
-        { email: 'jersoncasallas12@gmail.com', password: 'casallasjm18' },
-        { email: 'jersoncasallas1@gmail.com', password: 'casallasjm18' },
-        { email: 'the1%@gmail.com', password: '12345678' }
-    ];
+    { email: 'jersoncasallas12@gmail.com', password: 'casallasjm18' },
+    { email: 'jersoncasallas1@gmail.com', password: 'casallasjm18' },
+    { email: 'the1%@gmail.com', password: '12345678' }
+];
 
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-        event.preventDefault();
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-        let userFound = false;
+    let userFound = false;
 
-        // Buscar el usuario que coincida con el correo y la contraseña ingresados
-        for (let i = 0; i < users.length; i++) {
-            if (users[i].email === email && users[i].password === password) {
-                userFound = true;
-                break;
-            }
+    // Buscar el usuario que coincida con el correo y la contraseña ingresados
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].email === email && users[i].password === password) {
+            userFound = true;
+            break;
         }
+    }
 
-        if (userFound) {
-            // Si el usuario es encontrado, marca el inicio de sesión como exitoso
-            localStorage.setItem('loggedIn', 'true'); // Guardamos en localStorage
-            alert('Inicio de sesión exitoso. ¡Bienvenido!');
-            window.location.href = 'index.html'; // Redirige a la página
-        } else {
-            alert('Credenciales incorrectas. Inténtalo de nuevo.');
-        }
-    });
-</script>
-  
+    if (userFound) {
+        // Si el usuario es encontrado, marca el inicio de sesión como exitoso
+        localStorage.setItem('loggedIn', 'true'); // Guardamos en localStorage
+        localStorage.setItem('loginTime', Date.now()); // Guardamos el tiempo del inicio de sesión
+        alert('Inicio de sesión exitoso. ¡Bienvenido!');
+        window.location.href = 'index.html'; // Redirige a la página
+    } else {
+        alert('Credenciales incorrectas. Inténtalo de nuevo.');
+    }
+});
+
+</script>  
 </body>
 </html>
