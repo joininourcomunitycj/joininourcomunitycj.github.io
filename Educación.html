@@ -74,6 +74,12 @@
     </style>
 </head>
 <body>
+    <script>
+    // Verifica si el usuario está logueado
+    if (!localStorage.getItem('loggedIn')) {
+        // Si no está logueado, redirige a la página de inicio de sesión (nn.html)
+        window.location.href = 'nn.html';
+    }
     <header>
         <h1>Educación Básica</h1>
     </header>
