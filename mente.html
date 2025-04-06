@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="" type="image/x-icon">
     <title>Mente - Recursos y Herramientas</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/joininourcomunitycj/joininourcomunitycj.github.io/refs/heads/main/d7fa333153cad2f5eba17440bd7938de.ico" type="image/x-icon">
     <style>
         .button {
             display: inline-block;
@@ -17,9 +17,11 @@
             border-radius: 5px;
             text-decoration: none;
             text-align: center;
-            cursor: pointer;}
+            cursor: pointer;
+        }
         .button:hover {
-            background-color: #0056b3;}
+            background-color: #0056b3;
+        }
 
         body {
             font-family: Arial, sans-serif;
@@ -71,16 +73,42 @@
             color: #fff;
             margin-top: 20px;
         }
+        iframe {
+            display: block; /* Hace que el iframe sea tratado como un bloque */
+            margin: 0 auto; /* Centra horizontalmente */
+            width: 55%;
+            max-width: 800px;
+            height: 400px;
+            border: solid;
+            border-radius: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilos responsivos para el iframe */
+        .iframe-container {
+            display: block; /* Hace que el iframe sea tratado como un bloque */
+            margin: 0 auto; /* Centra horizontalmente */
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            border: hidden;
+            border-radius: 0px;
+            box-shadow: 0 0px 0px rgba(236, 4, 4, 0.5);}
+        .iframe-container iframe {
+            display: block; /* Hace que el iframe sea tratado como un bloque */
+            margin: 0 auto; /* Centra horizontalmente */
+            width: 40%;
+            max-width: 800px;
+            height: 400px;
+            border: solid
+            border-radius:40px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);}
+
+        /* Consultas de medios para pantallas más pequeñas (móviles) */
+        
     </style>
 </head>
 <body>
-    <script>
-    // Verifica si el usuario está logueado
-    if (!localStorage.getItem('loggedIn')) {
-        // Si no está logueado, redirige a la página de inicio de sesión (nn.html)
-        window.location.href = 'nn.html';
-    }
-    </script>
     <header>
         <h1>Mente - Recursos y Herramientas</h1>
     </header>
@@ -99,22 +127,19 @@
             <div class="books">
                 <p>A continuación, puedes acceder a una selección de libros recomendados para el desarrollo mental:</p>
                 <ul><h3>Para Abrir los ojos:</h3>
-                    <!-- Aquí puedes agregar los enlaces de los libros -->
                     <li><a href="https://drive.google.com/file/d/13S1FO698enkUupRdKXmP0_cJDFBehUfT/view?usp=sharing" target="_blank">Espabila de Una Puta Vez!</a> Libro del 29/Dic/2020</li>
-                    <li><a href="https://drive.google.com/file/d/10cRmWDUDq5Y9YaLX2dmyHbTpLQNSZA7D/view?usp=sharing" target="_blank">Los 4 acuerdos </a>  (Libro Corto)</li>
-                    <li><a href="https://drive.google.com/file/d/10oQOWzj-1KbCRGRa59EUiA8FCtVT3HYy/view?usp=sharing" target="_blank">Mentalidad de Titán</a> (Libro Super Moderno) </li>
+                    <li><a href="https://drive.google.com/file/d/10cRmWDUDq5Y9YaLX2dmyHbTpLQNSZA7D/view?usp=sharing" target="_blank">Los 4 acuerdos</a>  (Libro Corto)</li>
+                    <li><a href="https://drive.google.com/file/d/10oQOWzj-1KbCRGRa59EUiA8FCtVT3HYy/view?usp=sharing" target="_blank">Mentalidad de Titán</a> (Libro Super Moderno)</li>
                     <P>Precio: Gratis !</P>
                 </ul>
                 <br>
                 <ul><h3>Para Mejorar Hábitos:</h3>
-                    <!-- Aquí puedes agregar los enlaces de los libros -->
                     <li><a href="https://drive.google.com/file/d/1-YzjlNpCcGnLoQg99qYoS3vsYDTnESTO/view?usp=sharing" target="_blank">Hábitos Atómicos!</a> Libro Moderno</li>
                     <li><a href="https://drive.google.com/file/d/1q8iOPzCYBgs2pW0UsrT7185OejOeYfc3/view?usp=sharing" target="_blank">El Poder de los hábitos</a></li>
                     <P>Precio: Gratis !</P>
-                </ul> 
+                </ul>
                 <br>
-                <ul><h3>Espiritualiad, Filosofía, superación personal, Psicología, etc.:</h3>
-                    <!-- Aquí puedes agregar los enlaces de los libros -->
+                <ul><h3>Espiritualidad, Filosofía, superación personal, Psicología, etc.:</h3>
                     <li><a href="https://drive.google.com/file/d/10FxPt_5uIJ4BecaLmYnZvznTmlSOi0yd/view?usp=sharing" target="_blank">El Poder del Ahora</a> (Muy Leído)</li>
                     <li><a href="https://drive.google.com/file/d/137u-8zeoj1zHEUVtTX01OwdUUNOglKRm/view?usp=sharing" target="_blank">Las 48 Leyes del Poder</a></li>
                     <li><a href="https://drive.google.com/file/d/11OFfbDWls0aEJSpslgjXniHxr3nXae2b/view?usp=sharing" target="_blank">Tus Zonas erróneas</a></li>
@@ -136,11 +161,9 @@
         <section>
             <h2 class="category-title">Entretenimiento para entender el comportamiento de las personas, reflexiones de películas, Filosofía, metáforas de la vida y entre otras cosas valiosas.</h2>
             <div class="seminar">
-                <p><a href="https://www.youtube.com/@FaridDieckOficial/videos" target="_blank">Farid Dieck</a>   es un comunicador que transforma las palabras en puentes emocionales. Su enfoque está en conectar con las experiencias humanas más profundas, abordando temas como el amor propio, la superación personal y el valor de la empatía. Con una narrativa auténtica y cercana, Farid invita a su audiencia a reflexionar sobre su propósito de vida, sus relaciones y cómo encontrar belleza en lo cotidiano.
-
-                    Ya sea a través de sus videos, conferencias o contenido en redes sociales, su capacidad para tocar el corazón de las personas lo convierte en un referente para quienes buscan no solo inspiración, sino también herramientas para enfrentar los desafíos diarios. Farid es más que un creador; es un compañero de camino para quienes desean descubrir lo mejor de sí mismos</p>
+                <p><a href="https://www.youtube.com/@FaridDieckOficial/videos" target="_blank">Farid Dieck</a>   es un comunicador que transforma las palabras en puentes emocionales. Su enfoque está en conectar con las experiencias humanas más profundas, abordando temas como el amor propio, la superación personal y el valor de la empatía. Con una narrativa auténtica y cercana, Farid invita a su audiencia a reflexionar sobre su propósito de vida, sus relaciones y cómo encontrar belleza en lo cotidiano.</p>
                 <p><strong>Destacados:</strong> Vídeos en Youtube y shorts.</p>
-                <p> Visita este canal si te gusta ver películas y no te alcanza el tiempo, aquí se hacen análisis profundos de cada película, se reflexiona y se aprende para mejorar como persona.</p>
+                <p> Visita este canal si te gusta ver películas y no te alcanza el tiempo, que a través de reflexiones puedes entender una película en minutos.</p>
             </div>
         </section>
         <section>
@@ -161,14 +184,16 @@
                 </p>
             </div>
         </section>
+
+        <!-- Aquí va el iframe responsivo -->
         <section>
-            <h2 class="category-title">Información importante !</h2>
-            <div class="seminar">
-                <p>Estos canales no solo se enfocan en La Categoría mente,sin embargo, fueron seleccionados porque han sido los más destacados en esta categoría</p>
-                <p><strong>Ésta Página aún sigue en desarrollo y se estará mejorando la estética, seguridad, eficiencia y Logística en el transcurso del año.</strong></p>
-                <p>Gracias por su comprensión ! </p>
+            <h2 class="category-title">El cambio es Hoy!</h2>
+            <div class="iframe-container">
+                <iframe loading="lazy" src="https://www.canva.com/design/DAGj0nF_rrw/XcD2rg4RdV2WwUumzGgqhw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
             </div>
         </section>
+
+        <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGj0nF_rrw&#x2F;XcD2rg4RdV2WwUumzGgqhw&#x2F;view?utm_content=DAGj0nF_rrw&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">NO TENGAS MIEDO A DAR EL PRIMER PASO...</a> de ꧁༒The 1%༒꧂
     </main>
     <footer>
         <p>© 2025 - El 1% - Comunidad Exclusiva</p>
